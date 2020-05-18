@@ -1,0 +1,92 @@
+.menuButton {
+    width: 200px;
+    height: 50px;
+    margin: 30px 0px 30px 0px ;
+    background-color: darkblue;
+    font-size: x-large;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px  white;    
+    text-align: center;
+    line-height: 50px;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;    
+}
+
+.menuButton:hover {
+    background-color: darkslateblue;
+    box-shadow: 0px 0px 8px 8px darkturquoise;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.menuButton:active {
+    background-color: white;
+    box-shadow: 0px 0px 8px 8px black;
+    transition-duration: 0.2s;
+    -moz-transition-duration: 0.2s;
+    -webkit-transition-duration: 0.2s;
+    -o-transition-duration: 0.2s;
+    cursor: pointer;
+}
+
+.container {
+    width: 200px;
+    margin: auto;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+    margin: 30px 0px 100px 0px;
+    text-align: center;
+    line-height: 50px;
+}
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.splashscreen {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 800px; 
+    height: 600px; 
+    z-index: 2; 
+    background-color: black; 
+    margin: 8px; 
+    text-align: center;
+}
+
+.splashscreen-fade {
+    transition-duration: 2s;
+    -moz-transition-duration: 2s;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
+    opacity: 0 !important;            
+}
+
+.splashscreen-z {
+    z-index: -1;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    z-index: 1;
+    margin: 8px;
+}
+
+.menu-z {
+    z-index: -1;
+}
