@@ -1,6 +1,6 @@
 # Space Shooter
 
-This project was the first to use PixiJS at front-end development
+This project was the first for me to use PixiJS at front-end development :)
 
 ## Game configuration
 
