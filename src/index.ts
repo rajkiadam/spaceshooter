@@ -1,38 +1,44 @@
-import * as _ from 'lodash';
-import * as Game from './game';
+/**
+ * Main entry point of the application
+ */
 
-let game: Game.Game;
+/* eslint-disable indent */
+// eslint-disable-next-line no-unused-vars
+import * as _ from 'lodash'
+import * as Game from './Game'
+
+let game: Game.Game
+
 window.onload = () => {
-    let timer = setTimeout(() => {
-        let item = document.getElementById("splashscreen");
-        if(item != null) {
-            item.classList.add("splashscreen-fade");
-            let zindexTimer = setTimeout(() => {
-                if(item != null){
-                    item.classList.add("splashscreen-z");
+    // menu handling
+    setTimeout(() => {
+        const item = document.getElementById('splashscreen')
+        if (item != null) {
+            item.classList.add('splashscreen-fade')
+            setTimeout(() => {
+                if (item != null) {
+                    item.classList.add('splashscreen-z')
                 }
             }, 1000)
         }
     }, 2000)
 
-    game = new Game.Game();
+    // game initialization
+    game = new Game.Game()
     game.initializeGame()
 
-    let gameCall = game.startGame;
+    const gameCall = game.startGame
 
-    Array.from(document.getElementsByClassName("gameButton")).forEach((item) => {
-        item.addEventListener('click', gameCall);
+    // add listeners on game buttons
+    Array.from(document.getElementsByClassName('gameButton')).forEach((item) => {
+        item.addEventListener('click', gameCall)
     })
 
-    let exit = document.getElementById("exitButton");
-    if(exit != null)
-    exit.addEventListener('click', () => {
-        window.location.href = 'https://www.pixijs.com'
-    })    
+    // add listener on exit button
+    const exit = document.getElementById('exitButton')
+    if (exit != null) {
+        exit.addEventListener('click', () => {
+            window.location.href = 'https://www.pixijs.com'
+        })
+    }
 }
-
-
-
-
-
-

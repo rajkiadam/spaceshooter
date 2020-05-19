@@ -1,14 +1,18 @@
-import { SpaceShip } from './spaceship'
+/* eslint-disable indent */
+import { SpaceShip } from './Spaceship'
+// eslint-disable-next-line no-unused-vars
 import { IPlayerSpaceShip } from './IPlayerSpaceShip'
-import { Rocket } from './rocket';
+import { Rocket } from './Rocket'
 
+/**
+ * Represents a Player spaceship
+ */
 export class PlayerSpaceShip extends SpaceShip implements IPlayerSpaceShip {
-    constructor(x: number, y: number, texture: PIXI.Texture) {        
-        super(x, y, texture)
+    /**
+     * Shooting a new rocket
+     * @param texture rocket texture
+     */
+    shoot (texture: PIXI.Texture): Rocket {
+        return new Rocket(this.x + this.width / 2, this.y, texture)
     }
-
-    shoot(texture: PIXI.Texture): Rocket {
-        return new Rocket(this.x + this.width / 2, this.y, texture);
-    }
-
 }

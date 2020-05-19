@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+/**
+ * Enum contains the controller buttons assigned to the game
+ */
 export enum Controls {
     Up = 87,
     Down = 83,

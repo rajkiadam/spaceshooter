@@ -1,3 +1,6 @@
+/**
+ * Class containing Constants for the game
+ */
 export class Constants {
     static APPHEIGHT: number = 600;
     static APPWIDTH: number = 800;
